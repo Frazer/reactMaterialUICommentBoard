@@ -16,12 +16,12 @@ class CommentList extends React.Component {
   }
 
   render() {
-  	return (
+    return (
       <List>
         {this.props.ids.length?
         this.props.ids.map((id) => 
-        				<Comment key={id} {...this.props} comment={this.props.comments.byId[id]} />
-        		): this.props.noCommentText &&this.props.newCommentsPossible && <b>{this.props.noCommentText}</b>} 
+              <Comment key={id} {...this.props} comment={this.props.comments.byId[id]} />
+            ): this.props.noCommentText &&this.props.newCommentsPossible && <b>{this.props.noCommentText}</b>} 
         <AddComment add={(comment)=>{this.props.addComment(comment)}} username={this.props.username} parent={this.props.parent} handleToggleComments={this.props.handleToggleComments} newCommentsPossible={this.props.newCommentsPossible}/>
 			</List>
     )

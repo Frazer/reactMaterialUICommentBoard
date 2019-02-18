@@ -3,7 +3,7 @@ module.exports = {
         "browser": true,
         "es6": true
     },
-    "extends": "google",
+    "extends": "eslint:recommended",
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -19,5 +19,7 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "react/jsx-uses-vars": 1,
+        "react/react-in-jsx-scope": 1
     }
 };

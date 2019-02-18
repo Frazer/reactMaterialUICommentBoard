@@ -27,7 +27,7 @@ class Comment extends React.Component {
         <DeleteButton comment={this.props.comment} username={this.props.username} deleteAction={this.props.deleteComment} commentId={this.props.comment.id}/>
         <CommentList {...this.props} noCommentText="" ids={this.props.comment.children} parent={this.props.comment.id}/>
       </ListItem>
-	);
+    );
   }
 }
 

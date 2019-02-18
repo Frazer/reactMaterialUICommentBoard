@@ -1,0 +1,11 @@
+.commentButton{
+  float:right;
+  height: 18px;
+  line-height: 20px;
+  vertical-align: top; 
+}
+
+.commentButton button{
+  height: 18px !important;
+  line-height: 20px !important;
+}

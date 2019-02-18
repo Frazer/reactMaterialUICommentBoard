@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card, CardActions} from 'material-ui/Card';
 import CommentList from './CommentList.js';
- 
+
 class CommentsSection extends React.Component {
   constructor(props) {
     super(props);

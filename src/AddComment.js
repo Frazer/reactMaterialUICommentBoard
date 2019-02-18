@@ -36,7 +36,7 @@ export default class AddComment extends React.Component {
   handleSubmitKey = event => {
     //on shift+enter, submit
     const keyCode = event.keyCode || event.which;
-    if (keyCode === 13) {
+    if(keyCode === 13) {
       this.submit();
     };
   };
@@ -72,4 +72,4 @@ export default class AddComment extends React.Component {
     }
 	}
 }
- 
+

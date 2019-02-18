@@ -4,9 +4,6 @@ import TextField from 'material-ui/TextField';
 import {CardActions} from 'material-ui/Card';
 import './addComment.css'
 
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
-
 export default class AddComment extends React.Component {
   constructor(props) {
     super(props);

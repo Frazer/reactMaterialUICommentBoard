@@ -2,13 +2,6 @@ import React, { Component } from 'react'
 import './login.css';
 
 export class UserLogIn extends Component {
-  constructor(props) {
-    super(props)
-    
-    this.state = {
-      
-    }
-  }
 
   handleInputChange = (event) =>{
     const target = event.target;

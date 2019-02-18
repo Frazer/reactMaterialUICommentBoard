@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CommentList from './CommentList.js';
 import DeleteButton from './DeleteButton.js';
 import {ListItem} from 'material-ui/List';
@@ -16,7 +17,7 @@ class Comment extends React.Component {
   }
 
   render() {
-  	return (
+    return (
       <ListItem key={this.props.comment.id} className="comment">
         <div className="UserInfo-name">
             {this.props.comment.name} :
@@ -30,6 +31,13 @@ class Comment extends React.Component {
     );
   }
 }
+
+Comment.propTypes = {
+  comment: PropTypes.object.isRequired,
+  deleteComment: PropTypes.func.isRequired,
+  username: PropTypes.string.isRequired,
+}
+
 
 export default Comment;
 

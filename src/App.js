@@ -108,7 +108,7 @@ class App extends Component {
             <UserLogIn name={this.state.username} usernameUpdate={this.usernameUpdate}/>
           </div>
           <MainPost/>
-    			<CommentsSection {...this.state} addComment={this.addComment} deleteComment={this.deleteComment} handleToggleComments={this.handleToggleComments}/>
+          <CommentsSection {...this.state} addComment={this.addComment} deleteComment={this.deleteComment} handleToggleComments={this.handleToggleComments}/>
         </div>
       </MuiThemeProvider>
     );

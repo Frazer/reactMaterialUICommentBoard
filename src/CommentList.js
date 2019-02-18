@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AddComment from './AddComment.js';
 import Comment from './Comment.js';
 import {List} from 'material-ui/List';
@@ -27,5 +28,17 @@ class CommentList extends React.Component {
     )
   }
 }
+
+CommentList.propTypes = {
+  ids: PropTypes.array.isRequired,
+  comments: PropTypes.object.isRequired,
+  parent: PropTypes.number.isRequired,
+  username: PropTypes.string.isRequired,
+  noCommentText: PropTypes.string.isRequired,
+  handleToggleComments: PropTypes.func.isRequired,
+  newCommentsPossible: PropTypes.bool.isRequired,
+  addComment: PropTypes.func.isRequired,
+}
+
 
 export default CommentList;

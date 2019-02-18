@@ -3,11 +3,15 @@ module.exports = {
         "browser": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    'extends': [
+        "eslint:recommended",
+        'plugin:react/recommended'
+    ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -20,6 +24,7 @@ module.exports = {
     ],
     "rules": {
         "react/jsx-uses-vars": 1,
-        "react/react-in-jsx-scope": 1
+        "react/react-in-jsx-scope": 1,
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     }
 };

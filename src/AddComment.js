@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import {CardActions} from 'material-ui/Card';
@@ -11,7 +12,6 @@ export default class AddComment extends React.Component {
       open: false,
     };
   }
-  
 
   handleToggle = () => {
     this.props.handleToggleComments();
@@ -21,13 +21,13 @@ export default class AddComment extends React.Component {
   };
 
   submit = ()=>{
-  	var comment = {
+    var comment = {
       comment: this.state.comment,
       children: [],
       parent: this.props.parent
-  	}
-  	this.props.add(comment);
-  	this.handleToggle();
+    }
+    this.props.add(comment);
+    this.handleToggle();
   }
 
   handleSubmitKey = event => {
@@ -35,7 +35,7 @@ export default class AddComment extends React.Component {
     const keyCode = event.keyCode || event.which;
     if(keyCode === 13) {
       this.submit();
-    };
+    }
   };
 
   handleCommentChange = (event) => {
@@ -70,3 +70,10 @@ export default class AddComment extends React.Component {
 	}
 }
 
+AddComment.propTypes = {
+  handleToggleComments: PropTypes.func.isRequired,
+  add: PropTypes.func.isRequired,
+  parent: PropTypes.number.isRequired,
+  username: PropTypes.string.isRequired,
+  newCommentsPossible: PropTypes.bool.isRequired,
+}

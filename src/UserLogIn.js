@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './login.css';
 
 export class UserLogIn extends Component {
@@ -18,7 +19,7 @@ export class UserLogIn extends Component {
     const keyCode = event.keyCode || event.which;
     if (keyCode === 13) {
       this.loginSubmit.click();
-    };
+    }
   };
   login = (loginFunction)=>{
     loginFunction(this.state.username);
@@ -49,5 +50,11 @@ export class UserLogIn extends Component {
     )
   }
 }
+
+UserLogIn.propTypes = {
+  usernameUpdate: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+}
+
 
 export default UserLogIn

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Card, CardActions} from 'material-ui/Card';
 import CommentList from './CommentList.js';
 
@@ -14,7 +15,7 @@ class CommentsSection extends React.Component {
   }
 
   render() {
-  	return (
+    return (
 			<CardActions>
 				<Card containerStyle={{margin: "40px"}}>
 					<CommentList {...this.props} ids={this.props.comments.allRootIds} noCommentText="No comments yet"/>
@@ -23,5 +24,10 @@ class CommentsSection extends React.Component {
 		);
   }
 }
+
+CommentsSection.propTypes = {
+  comments: PropTypes.object.isRequired,
+}
+
 
 export default CommentsSection;

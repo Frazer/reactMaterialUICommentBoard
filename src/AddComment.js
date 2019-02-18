@@ -2,7 +2,7 @@ import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import {CardActions} from 'material-ui/Card';
-import './addComment.css'
+import './addComment.css';
 
 export default class AddComment extends React.Component {
   constructor(props) {
@@ -20,7 +20,7 @@ export default class AddComment extends React.Component {
     });
   };
 
-  submit(){
+  submit = ()=>{
   	var comment = {
       comment: this.state.comment,
       children: [],

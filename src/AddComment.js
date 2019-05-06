@@ -65,9 +65,9 @@ export default class AddComment extends React.Component {
         )
       }
     }else{
-      return (<span><RaisedButton className="commentButton" label="Log in to comment" onClick={()=>{}} /></span>);
+      return (<span>Please log in</span>);
     }
-	}
+  }
 }
 
 AddComment.propTypes = {

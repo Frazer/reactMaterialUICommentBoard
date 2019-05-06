@@ -65,7 +65,7 @@ export default class AddComment extends React.Component {
         )
       }
     }else{
-      return (<span>Please log in</span>);
+      return (<></>);
     }
   }
 }
